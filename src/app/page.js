@@ -3,7 +3,21 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div className={`${styles.page}`}>
+      <div className={`${styles.header}`}>
+        {/* HEADER */}
+        <div></div>
+        <h1>Welcome to My Site, Fellow Internet Losers!</h1>
+      </div>
+
+      {/* TOP NAV */}
+
+      <nav className={`${styles.topNav}`}>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/journal">Journal</a>
+      </nav>
+
       <main className={styles.main}>
         <Image
           className={styles.logo}

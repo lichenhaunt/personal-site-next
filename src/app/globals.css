@@ -1,13 +1,45 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: url(../assets/sky-sadgrl.png);
+  --foreground: rgb(255, 255, 255, 0.95);
+  --blue: rgb(32, 70, 82, 0.95);
+  --light-blue: rgb(153, 215, 248);
+  --light-blue2: rgb(148, 193, 218);
+  --bright-blue: rgb(25, 176, 214);
+  --black: rgb(0, 0, 0, 0.85);
+  --mizuiro: rgb(162, 241, 255);
+  --baby-blue: rgb(153, 207, 231, 0.75);
+  --pink: rgb(255, 226, 243);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.light {
+  background: var(--background);
+  color: var(--foreground);
+  --button-color: var(--foreground);
+  --button-text: var(--bright-blue);
+  --widget-bg: var(--foreground);
+  --widget-text: var(--baby-blue);
+  --header-color: var(--baby-blue);
+}
+
+.dark {
+  background: url(../assets/aquagalaxy_small-sadgrl.gif);
+  color: var(--light-blue);
+  --button-color: var(--black);
+  --button-text: var(--light-blue);
+  --widget-bg: var(--black);
+  --widget-text: var(--light-blue);
+  --header-color: var(--blue);
+}
+
+.themeChange {
+  background: var(--button-color);
+  color: var(--button-text);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  border: 1px solid white;
+  border-radius: 5px;
 }
 
 html,
@@ -17,17 +49,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
