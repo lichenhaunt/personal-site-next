@@ -29,6 +29,13 @@ export default function RootLayout({ children }) {
   }
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="description"
+          content="you've stumbled into my realm, mortal!"
+        ></meta>
+        <title>lichenhaunt.com</title>
+      </head>
       <body
         className={`${cloisterBlack.variable} ${glowNight.variable} ${veniceClassic.variable} ${theme}`}
       >

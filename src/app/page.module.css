@@ -36,9 +36,29 @@
   padding: 4px 0px;
   font-family: var(--venice-classic);
   font-size: 20px;
-  background-color: var(--widget-bg);
-  color: var(--widget-text);
+  background-color: var(--header-bg);
+  color: var(--header-text);
   border-radius: 5px;
+}
+
+.widget {
+  border: var(--widget-border);
+  background-color: var(--widget-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.hello {
+  position: relative;
+  width: 50%;
+  margin: 1em auto;
+  text-align: center;
+  font-family: var(--venice-classic);
+}
+
+.hello h2 {
+  font-size: 30px;
+  margin-bottom: -4px;
 }
 
 @media (prefers-color-scheme: dark) {

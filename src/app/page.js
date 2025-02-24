@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
+import MusicPlayer from "@/components/MusicPlayer";
 
 export default function Home() {
   return (
@@ -19,45 +21,22 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        {/* HELLO SECTION */}
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div className={`${styles.widget} ${styles.hello}`}>
+          <h2>You fools have stumbled into my realm!</h2>
+          <p>
+            I welcome thee, stay and rest a while. I go by many names but you
+            can refer to me as <b>lichenhaunt</b>. This site is{" "}
+            <i>HOT GARBAGE</i>, but I wouldn't have it any other way &lt;3
+            <br />
+            This is mostly just a little space for me to be weird online in
+            peace, site is a WIP, but will serve as a digital journal.
+          </p>
+        </div>
+
+        <div className={styles.musicbox}>
+          <MusicPlayer />
         </div>
       </main>
       <footer className={styles.footer}>
