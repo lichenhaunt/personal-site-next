@@ -23,6 +23,14 @@
   --widget-border: 2px solid white;
   --bold-color: var(--pink);
   --hover-color: var(--mizuiro);
+  --bigGif: url(../assets/Tumblr_l_9687564870417.gif);
+  --button-color: var(--baby-blue);
+  --button-border: 1px solid var(--foreground);
+  --button-hover: var(--foreground);
+  --button-border-hover: var(--pink);
+  --button-text: var(--pink);
+  --marq-title: white;
+  --marq-text: var(--baby-blue);
 }
 
 .dark {
@@ -37,6 +45,14 @@
   --widget-border: 2px solid var(--blue);
   --bold-color: var(--bright-blue);
   --hover-color: white;
+  --bigGif: url(../assets/wizard-orb-pondering.gif);
+  --button-color: var(--black);
+  --button-border: 1px solid var(--light-blue);
+  --button-hover: white;
+  --button-border-hover: white;
+  --button-text: var(--light-blue);
+  --marq-title: var(--blue);
+  --marq-text: var(--light-blue);
 }
 
 .themeChange {
@@ -60,10 +76,15 @@ body {
   font-family: var(--glow-night), Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: visible;
 }
 
 h2 {
   font-family: var(--cloister-black);
+}
+
+h3 {
+  font-family: var(--venice-classic), monospace;
 }
 
 a {

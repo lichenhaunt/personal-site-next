@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "../app/page.module.css";
-import Image from "next/image";
 
 export default function MusicPlayer() {
   const [currentSong, setCurrentSong] = useState(null);
@@ -43,12 +42,12 @@ export default function MusicPlayer() {
   };
 
   return (
-    <div className={styles.widget} id="music-player">
-      <h3 id="marq" className="main-title">
+    <div className={`${styles.widget} ${styles.musicPlayer}`} id="music-player">
+      <h3 id="marq" className={styles.marqTitle}>
         You're listening to 420.69 - Wizards Only Fools!
       </h3>
-      <div className="jukebox">
-        <div className="activate">
+      <div className={styles.jukebox}>
+        <div className={styles.activate}>
           <img
             src="/11808137_0a6bb.gif"
             width="100px"

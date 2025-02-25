@@ -61,6 +61,85 @@
   margin-bottom: -4px;
 }
 
+.bigGifs {
+  content: var(--bigGif);
+  height: 163px;
+  margin: 1.5em auto;
+}
+
+.musicbox {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.marqTitle {
+  background-color: var(--marq-title);
+  color: var(--marq-text);
+  padding: 2px;
+  margin: 0px;
+  font-size: 25px;
+}
+
+.musicPlayer {
+  position: relative;
+  width: 175px;
+  height: 175px;
+}
+
+.activate {
+  position: relative;
+  width: 115px;
+  margin: 8px auto;
+}
+
+.jukebox ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  list-style: none;
+  text-align: center;
+}
+
+.jukebox li {
+  padding: 2px 0px;
+}
+
+.jukebox:hover ul,
+.activate:focus + ul,
+.juekbox:focus-within > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  right: 50%;
+  z-index: 1;
+}
+
+.jukebox button {
+  background-color: var(--button-color);
+  color: var(--button-text);
+  border: var(--button-border);
+  border-radius: 5px;
+}
+
+.jukebox button:hover {
+  color: var(--button-hover);
+  border-color: var(--button-border-hover);
+}
+
+.musicPlayer h3 {
+  text-align: center;
+  font-size: large;
+}
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;

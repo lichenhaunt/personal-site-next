@@ -36,7 +36,9 @@ export default function Home() {
         </div>
 
         <div className={styles.musicbox}>
+          <div className={styles.bigGifs}></div>
           <MusicPlayer />
+          <div className={styles.bigGifs}></div>
         </div>
       </main>
       <footer className={styles.footer}>
