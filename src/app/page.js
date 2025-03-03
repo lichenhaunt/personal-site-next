@@ -40,6 +40,28 @@ export default function Home() {
           <MusicPlayer />
           <div className={styles.bigGifs}></div>
         </div>
+
+        <div className={`${styles.widget} ${styles.mainBox}`}>
+          <h2>Your Soul is now Trapped for Eternity</h2>
+          <p>
+            Welcome to my little corner of the <b>INTERNET</b>, I do not envy
+            you, Mortal. Feel free to look around and browse to your heart's
+            content.
+            <br />
+            I'm kinda just getting started on this whole small web thing, so it
+            may not be super fleshed out yet. I have lots of ideas for this site
+            though, so if you enjoy <b>SMASH THAT RSS BUTTON</b> to get updates.
+            <br />
+            This is mostly just a digital journal/scrapbook of things I
+            like/collect. I may post insightful blogs about media I enjoy or my
+            thoughts on specific topics. There's definitely going to be some
+            shitposting my thoughts.
+            <br />I might even post HTML/CSS/JS guides if there's any interest
+            or I feel like there aren't many good resources for a specific
+            topic. Idk I just kinda want this to be a "digital spellbook" of
+            sorts, any magic you could want, is here.
+          </p>
+        </div>
       </main>
       <footer className={styles.footer}>
         <a

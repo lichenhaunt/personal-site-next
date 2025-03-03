@@ -14,8 +14,6 @@
 .light {
   background: var(--background);
   color: var(--foreground);
-  --button-color: var(--foreground);
-  --button-text: var(--bright-blue);
   --header-bg: var(--foreground);
   --header-text: var(--baby-blue);
   --header-color: var(--baby-blue);
@@ -31,6 +29,7 @@
   --button-text: var(--pink);
   --marq-title: white;
   --marq-text: var(--baby-blue);
+  --text: white;
 }
 
 .dark {
@@ -46,13 +45,12 @@
   --bold-color: var(--bright-blue);
   --hover-color: white;
   --bigGif: url(../assets/wizard-orb-pondering.gif);
-  --button-color: var(--black);
   --button-border: 1px solid var(--light-blue);
   --button-hover: white;
   --button-border-hover: white;
-  --button-text: var(--light-blue);
   --marq-title: var(--blue);
   --marq-text: var(--light-blue);
+  --text: var(--light-blue);
 }
 
 .themeChange {
@@ -81,10 +79,15 @@ body {
 
 h2 {
   font-family: var(--cloister-black);
+  font-size: 30px;
 }
 
 h3 {
   font-family: var(--venice-classic), monospace;
+}
+
+p {
+  font-family: var(--glow-night), monospace;
 }
 
 a {

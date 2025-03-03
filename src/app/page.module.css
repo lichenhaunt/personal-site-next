@@ -44,6 +44,7 @@
 .widget {
   border: var(--widget-border);
   background-color: var(--widget-bg);
+  color: var(--text);
   display: flex;
   flex-direction: column;
 }
@@ -57,7 +58,6 @@
 }
 
 .hello h2 {
-  font-size: 30px;
   margin-bottom: -4px;
 }
 
@@ -138,6 +138,19 @@
 .musicPlayer h3 {
   text-align: center;
   font-size: large;
+}
+
+.mainBox {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 4px 8px;
+  display: flex;
+  position: relative;
+}
+
+.mainBox h2 {
+  font-size: 36px;
 }
 
 @media (prefers-color-scheme: dark) {
