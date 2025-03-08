@@ -153,6 +153,11 @@
   font-size: 36px;
 }
 
+.divider {
+  content: var(--divider-image);
+  margin: 0 auto;
+}
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;

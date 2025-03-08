@@ -30,6 +30,7 @@
   --marq-title: white;
   --marq-text: var(--baby-blue);
   --text: white;
+  --divider-image: url(../../public/Tumblr_l_1434264911948437.jpg);
 }
 
 .dark {
@@ -51,6 +52,7 @@
   --marq-title: var(--blue);
   --marq-text: var(--light-blue);
   --text: var(--light-blue);
+  --divider-image: url(../../public/Tumblr_l_1434075695712259.gif);
 }
 
 .themeChange {

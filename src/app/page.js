@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import MusicPlayer from "@/components/MusicPlayer";
+import ButtonWall from "@/components/ButtonWall";
 
 export default function Home() {
   return (
@@ -35,11 +36,15 @@ export default function Home() {
           </p>
         </div>
 
+        {/* music player */}
+
         <div className={styles.musicbox}>
           <div className={styles.bigGifs}></div>
           <MusicPlayer />
           <div className={styles.bigGifs}></div>
         </div>
+
+        {/* main box */}
 
         <div className={`${styles.widget} ${styles.mainBox}`}>
           <h2>Your Soul is now Trapped for Eternity</h2>
@@ -61,6 +66,9 @@ export default function Home() {
             topic. Idk I just kinda want this to be a "digital spellbook" of
             sorts, any magic you could want, is here.
           </p>
+          <img className={styles.divider} alt="divider image" width="75%" />
+          {/* button wall */}
+          <ButtonWall />
         </div>
       </main>
       <footer className={styles.footer}>

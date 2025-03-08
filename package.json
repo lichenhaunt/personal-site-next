@@ -6,12 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "assets:seed": "npx tsx assets.seeds.js",
+    "assets:destroy": "npx tsx assets.seeds.js -d"
   },
   "dependencies": {
     "next": "15.0.0",
     "react": "19.0.0-rc-65a56d0e-20241020",
-    "react-dom": "19.0.0-rc-65a56d0e-20241020"
+    "react-dom": "19.0.0-rc-65a56d0e-20241020",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.2.0"
   },
   "devDependencies": {
     "eslint": "^8",
