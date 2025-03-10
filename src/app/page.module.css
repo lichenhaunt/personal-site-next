@@ -153,6 +153,10 @@
   font-size: 36px;
 }
 
+.mainBox br {
+  margin: 1em;
+}
+
 .divider {
   content: var(--divider-image);
   margin: 0 auto;

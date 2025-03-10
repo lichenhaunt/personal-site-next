@@ -24,6 +24,10 @@ export default function MusicPlayer() {
       title: "i_would_walk_500_miles.mp3",
       src: "https://media-upload.net/uploads/KGSmbhNQCsfF.mp3",
     },
+    {
+      title: "plastic_love.mp3",
+      src: "/plastico2.mp3",
+    },
   ];
 
   const stopMusic = () => {

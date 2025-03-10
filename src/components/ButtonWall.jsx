@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function ButtonWall() {
   const [btns, setBtns] = useState([]);
+  const [currentSong, setCurrentSong] = useState(null);
 
   useEffect(() => {
     const fetchBtns = async () => {
@@ -17,11 +18,96 @@ export default function ButtonWall() {
     fetchBtns();
   }, []);
 
-  if (!btns.length) {
-    return <p>No images yet....</p>;
+  const stopMusic = () => {
+    if (currentSong) {
+      currentSong.pause();
+      setCurrentSong(null);
+    }
+  };
+
+  const playSong = (index) => {
+    stopMusic(); // Stop any currently playing song
+    const audio = new Audio(songs[index].src);
+    audio.play();
+    setCurrentSong(audio);
+    audio.onended = () => setCurrentSong(null); // Reset current song when it ends
+  };
+
+  function isSpecialBtn(name) {
+    let isSpecial = false;
+    if (name == "mouse-wheel-btn") {
+      isSpecial = true;
+    }
+    if (name == "plastic-love-btn") {
+      isSpecial = true;
+    }
+    if (name == "no-ai-btn") {
+      isSpecial = true;
+    }
+    if (name == "no-genocide-btn") {
+      isSpecial = true;
+    }
+    if (name == "trans-rights-btn") {
+      isSpecial = true;
+    }
+
+    return isSpecial;
   }
 
-  return btns.map((btn) => {
-    <img className={styles.btn} alt={btn.name} src={btn.src} />;
+  const specialBtns = btns.filter((btn) => {
+    return isSpecialBtn(btn.name);
   });
+
+  const regularBtns = btns.filter((btn) => {
+    return !isSpecialBtn(btn.name);
+  });
+
+  const songs = [
+    {
+      src: "/plastico2.mp3",
+    },
+  ];
+
+  if (!btns.length) {
+    return <p>No images yet....</p>;
+  } else {
+    console.log("btns value", btns);
+    return (
+      <div>
+        <h3>Obligatory Button Wall</h3>
+        <div className={styles.btnWall}>
+          {regularBtns.map((btn) => {
+            return (
+              <img
+                src={btn.src}
+                key={btn.id}
+                alt={btn.name}
+                className={styles.btn}
+              />
+            );
+          })}
+        </div>
+        <br />
+        <img className={styles.divider} alt="divider image" width="75%" />
+        <br />
+        {specialBtns.map((btn) => {
+          return (
+            <img
+              src={btn.src}
+              key={btn.id}
+              alt={btn.name}
+              className={styles.btn}
+            />
+          );
+        })}
+        {/* add URL attribute to dataset for special buttons that need links */}
+        {songs.map((song, index) => (
+          <button
+            className={styles.plastic}
+            onClick={() => (currentSong ? stopMusic() : playSong(index))}
+          />
+        ))}
+      </div>
+    );
+  }
 }

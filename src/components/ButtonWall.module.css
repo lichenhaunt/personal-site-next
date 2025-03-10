@@ -1,0 +1,27 @@
+.btnWall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1em;
+  margin: 0 3em;
+}
+
+.btn {
+  padding: 2px;
+}
+
+.plastic {
+  background-color: transparent;
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  right: 92px;
+  top: -20px;
+  padding: 1em 42px;
+}
+
+.divider {
+  content: var(--divider-image);
+  margin: 0 auto;
+}

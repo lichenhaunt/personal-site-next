@@ -31,6 +31,7 @@
   --marq-text: var(--baby-blue);
   --text: white;
   --divider-image: url(../../public/Tumblr_l_1434264911948437.jpg);
+  --h3-color: var(--pink);
 }
 
 .dark {
@@ -53,6 +54,7 @@
   --marq-text: var(--light-blue);
   --text: var(--light-blue);
   --divider-image: url(../../public/Tumblr_l_1434075695712259.gif);
+  --h3-color: var(--bright-blue);
 }
 
 .themeChange {
@@ -86,6 +88,7 @@ h2 {
 
 h3 {
   font-family: var(--venice-classic), monospace;
+  color: var(--h3-color);
 }
 
 p {

@@ -21,6 +21,8 @@ export default function Home() {
         <a href="/journal">Journal</a>
       </nav>
 
+      {/* start main */}
+
       <main className={styles.main}>
         {/* HELLO SECTION */}
 
@@ -66,11 +68,19 @@ export default function Home() {
             topic. Idk I just kinda want this to be a "digital spellbook" of
             sorts, any magic you could want, is here.
           </p>
+
+          {/* divider image */}
+
           <img className={styles.divider} alt="divider image" width="75%" />
+
           {/* button wall */}
+
           <ButtonWall />
         </div>
       </main>
+
+      {/* end main */}
+
       <footer className={styles.footer}>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
