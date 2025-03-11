@@ -79,8 +79,8 @@ export default function ButtonWall() {
           {regularBtns.map((btn) => {
             return (
               <img
+                key={btn._id}
                 src={btn.src}
-                key={btn.id}
                 alt={btn.name}
                 className={styles.btn}
               />
@@ -93,16 +93,17 @@ export default function ButtonWall() {
         {specialBtns.map((btn) => {
           return (
             <img
+              key={btn._id}
               src={btn.src}
-              key={btn.id}
               alt={btn.name}
               className={styles.btn}
             />
           );
         })}
         {/* add URL attribute to dataset for special buttons that need links */}
-        {songs.map((song, index) => (
+        {songs.map((index) => (
           <button
+            key={index}
             className={styles.plastic}
             onClick={() => (currentSong ? stopMusic() : playSong(index))}
           />

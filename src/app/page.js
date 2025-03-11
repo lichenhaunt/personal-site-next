@@ -1,8 +1,8 @@
 "use client";
-import Image from "next/image";
 import styles from "./page.module.css";
 import MusicPlayer from "@/components/MusicPlayer";
 import ButtonWall from "@/components/ButtonWall";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +19,75 @@ export default function Home() {
         <a href="/about">About</a>
         <a href="/blog">Blog</a>
         <a href="/journal">Journal</a>
+      </nav>
+
+      {/* LEFT SIDE NAV */}
+
+      <nav className={`${styles.widget} ${styles.leftNav}`}>
+        <h2 className={styles.navHeader}>Explore if you dare!</h2>
+        <h3 className={styles.navTitle}>Personal</h3>
+        <ul>
+          <a href="/about">About</a>
+          <a href="/blog">Blog</a>
+          <a href="/journal">Journal</a>
+          <a href="/collections">Collections</a>
+          <a href="/art">Art</a>
+          <a href="/music">Music</a>
+          <a href="/games">Games</a>
+          <a href="/animanga">Animanga</a>
+          <a href="/media">Media Log</a>
+        </ul>
+        <h3 className={styles.navTitle}>Resources from a mere Web Wizard</h3>
+        <ul>
+          <a href="/sitemap">Sitemap</a>
+          <a href="/spellbook">Web Wizardry</a>
+        </ul>
+        <h3 className={styles.navTitle}>Outer Realms</h3>
+        <ul>
+          <a
+            href="https://github.com/lichenhaunt/personal-site"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Website Repo
+          </a>
+        </ul>
+      </nav>
+
+      {/* right side nav bar/small web stuff */}
+
+      <nav className={`${styles.widget} ${styles.rightNav}`}>
+        <h2 className={styles.navHeader}>Stay Current (or Not)</h2>
+        <h3 className={styles.navTitle}>RSS Feed</h3>
+        <ul>
+          <a href="rss.xml">
+            <img
+              className={styles.rss}
+              alt="RSS button"
+              width={24}
+              height={24}
+            />
+            Subscribe to updates
+          </a>
+          {/* figure out how rss works with next.js */}
+          <a href="" target="_blank">
+            What is an RSS feed you may ask?
+            {/* get link to rss intro */}
+          </a>
+        </ul>
+        <h3 className={styles.navTitle}>Find me Elsewhere</h3>
+        <ul>
+          <a
+            href="https://lichenhaunt.tumblr.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tumblr (WARNING ADULT CONTENT)
+          </a>
+          <a href="/chat">Discuss Wizard Politics</a>
+          {/* maybe make a discord server?? or code my own chatbox */}
+          <a href="mailto:lichenhaunt@yahoo.com">Email Me</a>
+        </ul>
       </nav>
 
       {/* start main */}
@@ -81,50 +150,7 @@ export default function Home() {
 
       {/* end main */}
 
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }

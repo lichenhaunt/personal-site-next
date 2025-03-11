@@ -32,6 +32,9 @@
   --text: white;
   --divider-image: url(../../public/Tumblr_l_1434264911948437.jpg);
   --h3-color: var(--pink);
+  --a-color: var(--mizuiro);
+  --a-hover-color: white;
+  --a-border-color: var(--mizuiro);
 }
 
 .dark {
@@ -55,6 +58,9 @@
   --text: var(--light-blue);
   --divider-image: url(../../public/Tumblr_l_1434075695712259.gif);
   --h3-color: var(--bright-blue);
+  --a-color: var(--blue);
+  --a-hover: var(--bright-blue);
+  --a-border-color: var(--light-blue2);
 }
 
 .themeChange {
@@ -96,13 +102,15 @@ p {
 }
 
 a {
-  color: inherit;
+  color: var(--a-color);
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--hover-color);
+a:hover,
+a:focus-within {
+  color: var(--a-hover-color);
   text-decoration: none;
+  border: 1px solid var(--a-border-color);
 }
 
 b,

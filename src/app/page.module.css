@@ -26,6 +26,11 @@
   border-radius: 8px;
 }
 
+.topNav a:hover,
+.topNav a:focus-within {
+  color: var(--bold-color);
+}
+
 .topNav {
   text-align: center;
   display: flex;
@@ -47,6 +52,48 @@
   color: var(--text);
   display: flex;
   flex-direction: column;
+}
+
+.leftNav {
+  width: 250px;
+  height: auto;
+  margin: 0px 8px;
+  position: absolute;
+  top: 15%;
+}
+
+.rightNav {
+  position: absolute;
+  right: 16px;
+  width: 250px;
+  top: 15%;
+}
+
+.navHeader {
+  margin: 0px;
+  padding: 2px;
+  font-size: 25px;
+  background: var(--header-color);
+  color: var(--header-text);
+}
+
+.navTitle {
+  padding: 4px;
+  margin: 0px;
+  font-size: 20px;
+}
+
+.leftNav ul,
+.rightNav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: var(--glow-night), serif;
+  font-size: 24;
+}
+
+.leftNav ul a {
+  padding: 4px 0px;
 }
 
 .hello {
