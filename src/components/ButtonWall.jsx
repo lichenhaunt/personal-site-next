@@ -33,35 +33,6 @@ export default function ButtonWall() {
     audio.onended = () => setCurrentSong(null); // Reset current song when it ends
   };
 
-  function isSpecialBtn(name) {
-    let isSpecial = false;
-    if (name == "mouse-wheel-btn") {
-      isSpecial = true;
-    }
-    if (name == "plastic-love-btn") {
-      isSpecial = true;
-    }
-    if (name == "no-ai-btn") {
-      isSpecial = true;
-    }
-    if (name == "no-genocide-btn") {
-      isSpecial = true;
-    }
-    if (name == "trans-rights-btn") {
-      isSpecial = true;
-    }
-
-    return isSpecial;
-  }
-
-  const specialBtns = btns.filter((btn) => {
-    return isSpecialBtn(btn.name);
-  });
-
-  const regularBtns = btns.filter((btn) => {
-    return !isSpecialBtn(btn.name);
-  });
-
   const songs = [
     {
       src: "/plastico2.mp3",
@@ -73,10 +44,10 @@ export default function ButtonWall() {
   } else {
     console.log("btns value", btns);
     return (
-      <div>
+      <div className={styles.main}>
         <h3>Obligatory Button Wall</h3>
         <div className={styles.btnWall}>
-          {regularBtns.map((btn) => {
+          {btns.map((btn) => {
             return (
               <img
                 key={btn._id}
@@ -90,18 +61,46 @@ export default function ButtonWall() {
         <br />
         <img className={styles.divider} alt="divider image" width="75%" />
         <br />
-        {specialBtns.map((btn) => {
-          return (
-            <img
-              key={btn._id}
-              src={btn.src}
-              alt={btn.name}
-              className={styles.btn}
-            />
-          );
-        })}
-        {/* add URL attribute to dataset for special buttons that need links */}
-        {songs.map((index) => (
+        <a
+          href="https://github.com/lichenhaunt"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/mouse-wheel-btn.gif"
+            alt="mouse-wheel-btn"
+            className={styles.btn}
+          />
+        </a>
+        <a
+          href="https://chuffed.org/project/123241-support-nabilas-fight-for-health-and-dignity"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/no-genocide-btn.jpg"
+            alt="no-genocide-btn"
+            className={styles.btn}
+          />
+        </a>
+        <img src="/no-ai-btn.gif" alt="no-ai-btn" className={styles.btn} />
+        <a
+          href="https://southernequality.app.neoncrm.com/forms/donation_cse_website_form"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/trans-rights-btn.jpg"
+            alt="trans-rights-btn"
+            className={styles.btn}
+          />
+        </a>
+        <img
+          src="/plastic-love-btn.jpg"
+          alt="plastic-love-btn"
+          className={styles.btn}
+        />
+        {songs.map((song, index) => (
           <button
             key={index}
             className={styles.plastic}

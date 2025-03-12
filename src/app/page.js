@@ -66,11 +66,12 @@ export default function Home() {
               alt="RSS button"
               width={24}
               height={24}
+              src="/rss.png"
             />
             Subscribe to updates
           </a>
           {/* figure out how rss works with next.js */}
-          <a href="" target="_blank">
+          <a href="https://en.wikipedia.org/wiki/RSS" target="_blank">
             What is an RSS feed you may ask?
             {/* get link to rss intro */}
           </a>

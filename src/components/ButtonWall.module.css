@@ -25,3 +25,7 @@
   content: var(--divider-image);
   margin: 0 auto;
 }
+
+.main a {
+  border: none;
+}

@@ -17,14 +17,6 @@ export default function MusicPlayer() {
       src: "/shadow wizard goblin insanity.mp3",
     },
     {
-      title: "i_hate_myself_for_loving_you.mp3",
-      src: "https://media-upload.net/uploads/TRNy3ljbSKXa.mp3",
-    },
-    {
-      title: "i_would_walk_500_miles.mp3",
-      src: "https://media-upload.net/uploads/KGSmbhNQCsfF.mp3",
-    },
-    {
       title: "plastic_love.mp3",
       src: "/plastico2.mp3",
     },
